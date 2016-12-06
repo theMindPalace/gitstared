@@ -13,7 +13,7 @@ export default class Gitstarlist extends Component {
 
 	componentDidMount() {
 		let self = this;
-		axios.get('https://api.github.com/users/saratonite/starred')
+		axios.get('https://api.github.com/users/saratonite/starred?page=2')
 		  .then(function (response) {
 		    self.setState({'stared_repos':response.data});
 		  })
